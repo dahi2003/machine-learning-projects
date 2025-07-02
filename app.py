@@ -55,3 +55,7 @@ if st.button('Recommend Movies'):
         for col, name, poster in zip(cols, names, posters):
             with col:
                 st.image(poster, caption=name, use_container_width=True)
+        cols2=st.columns(5)
+        for i in range (5,min(10,len(names))):
+            with cols2[i-5]:
+                st.image(posters[i], caption=names[i], use_container_width=True)
